@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       DEPLOY_ENVIRONMENT: ${{ steps.env.outputs.DEPLOY_ENVIRONMENT }}
+      DEPLOY_DOMAIN: ${{ steps.env.outputs.DEPLOY_DOMAIN }}
       VERCEL_ENVIRONMENT: ${{ steps.env.outputs.VERCEL_ENVIRONMENT }}
       VERCEL_COMMAND: ${{ steps.env.outputs.VERCEL_COMMAND }}
     steps:
@@ -26,6 +27,7 @@ jobs:
         id: env
         run: |
           echo "DEPLOY_ENVIRONMENT=$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo ${{ github.ref_name }})" >> $GITHUB_OUTPUT
+          echo "DEPLOY_DOMAIN=$([[ ${{ github.ref_name }} == 'main' ]] && echo 'tmcb.space' || echo "${{ github.ref_name }}.tmcb.space")" >> $GITHUB_OUTPUT
           echo "VERCEL_ENVIRONMENT=$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo 'preview')" >> $GITHUB_OUTPUT
           echo "VERCEL_COMMAND=$([[ ${{ github.ref_name }} == 'main' ]] && echo "--prod" || echo '')" >> $GITHUB_OUTPUT
 
@@ -70,6 +72,7 @@ jobs:
   deploy:
     environment:
       name: ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
+      url: https://${{ needs.setup.outputs.DEPLOY_DOMAIN }}
     name: Deploy to Vercel
     needs:
       - setup

@@ -1,5 +1,5 @@
-import ImageBox from 'components/shared/ImageBox'
-import type { MilestoneItem } from 'types'
+import ImageBox from '@/components/shared/ImageBox'
+import type { MilestoneItem } from '@/types'
 
 export function TimelineItem({ isLast, milestone }: { isLast: boolean; milestone: MilestoneItem }) {
   const { description, duration, image, tags, title } = milestone

@@ -1,7 +1,9 @@
-import { clsx } from 'clsx'
-import { CustomPortableText } from 'components/shared/CustomPortableText'
-import { Header } from 'components/shared/Header'
-import type { PagePayload } from 'types'
+import clsx from 'clsx'
+
+import { CustomPortableText } from '@/components/shared/CustomPortableText'
+import GeometricContainer from '@/components/shared/GeometricContainer'
+import { Header } from '@/components/shared/Header'
+import type { PagePayload } from '@/types'
 
 export interface PageProps {
   data: PagePayload | null
@@ -12,17 +14,24 @@ export function Page({ data }: PageProps) {
   const { body, overview, title } = data ?? {}
 
   return (
-    <div className={clsx([
-      'p-8'
-    ])}>
-      <Header title={title} description={overview} />
+    <>
+      <GeometricContainer>
+        <div className={clsx(['p-16'])}>
+          <Header centered title={title} description={overview} />
+        </div>
+      </GeometricContainer>
 
-      <div className={clsx([
-        'w-5/6 lg:w-4/6'
-      ])}>
-        {body && <CustomPortableText paragraphClasses="font-serif text-xl" value={body} />}
-      </div>
-    </div>
+      <GeometricContainer>
+        <div className={clsx(['block -m-[0.5px] p-16 min-h-[40vh]'])}>
+          {body && (
+            <CustomPortableText
+              paragraphClasses="tracking-wide font-serif text-xl w-full max-w-[60rem] mx-auto py-[0.5rem]"
+              value={body}
+            />
+          )}
+        </div>
+      </GeometricContainer>
+    </>
   )
 }
 

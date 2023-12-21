@@ -1,148 +1,114 @@
-# A Next.js Personal Website with a Native Authoring Experience<!-- omit in toc -->
+<div align="center">
+  <img src="https://gist.githubusercontent.com/0-vortex/3ba0d05bcd4afdbd0f2bf20542caf682/raw/02c432297a6822cd2944a41b9cc9986357d49748/His_Worshipful_Grace-1.svg" width="400">
 
-This starter is a statically generated personal website that uses [Next.js][nextjs] for the frontend and [Sanity][sanity-homepage] to handle its content. It comes with a native Sanity Studio that offers features like real-time collaboration, instant side-by-side content previews, and intuitive editing.
+# @tmcb/next.tmcb.space
 
-The Studio connects to Sanity Content Lake, which gives you hosted content APIs with a flexible query language, on-demand image transformations, powerful patching, and more. You can use this starter to kick-start a personal website or learn these technologies.
-
-> **Note**
+> A Next.js Personal Website with a Native Authoring Experience
 >
-> This repo uses the `app-router`.
->
-> For a `pages-router` alternative, use [template-nextjs-personal-website][personal-website-pages].
+> This starter is based on [@sanity-io/template-nextjs-personal-website](https://github.com/sanity-io/template-nextjs-personal-website)
 
-[![Deploy with Vercel](https://vercel.com/button)][vercel-deploy]
+[![Commits](https://img.shields.io/github/commit-activity/w/TMCB-SPACE/next.tmcb.space?style=flat)](https://github.com/TMCB-SPACE/next.tmcb.space/pulse)
+[![Issues](https://img.shields.io/github/issues/TMCB-SPACE/next.tmcb.space.svg?style=flat)](https://github.com/TMCB-SPACE/next.tmcb.space/issues)
+[![Releases](https://img.shields.io/github/v/release/TMCB-SPACE/next.tmcb.space.svg?style=flat)](https://github.com/TMCB-SPACE/next.tmcb.space/releases)
 
-## Features
+</div>
 
-- A performant, static personal website with editable projects
-- A native and customizable authoring environment, accessible on `yourpersonalwebsite.com/studio`
-- Real-time and collaborative content editing with fine-grained revision history
-- Side-by-side instant content preview that works across your whole site
-- Support for block content and the most advanced custom fields capability in the industry
-- Webhook-triggered Incremental Static Revalidation; no need to wait for a rebuild to publish new content
-- Free Sanity project with unlimited admin users, free content updates, and pay-as-you-go for API overages
-- A project with starter-friendly and not too heavy-handed TypeScript and Tailwind.css
+## Prerequisites
 
-## Table of Contents
+In order to run the project we need the following software binaries installed on our development machines:
 
-- [Features](#features)
-- [Table of Contents](#table-of-contents)
-- [Project Overview](#project-overview)
-  - [Important files and folders](#important-files-and-folders)
-- [Configuration](#configuration)
-  - [Step 1. Set up the environment](#step-1-set-up-the-environment)
-  - [Step 2. Set up the project locally](#step-2-set-up-the-project-locally)
-  - [Step 3. Run Next.js locally in development mode](#step-3-run-nextjs-locally-in-development-mode)
-  - [Step 4. Deploy to production](#step-4-deploy-to-production)
-- [Questions and Answers](#questions-and-answers)
-  - [It doesn't work! Where can I get help?](#it-doesnt-work-where-can-i-get-help)
-  - [How can I remove the "Next steps" block from my personal site?](#how-can-i-remove-the-next-steps-block-from-my-personal-website)
-- [Next steps](#next-steps)
+- `node>=21.1.0`
+- `npm>=10.2.3`
 
-## Project Overview
+We can also use one of the listed cloud providers we support:
 
-| [Personal Website](https://template-nextjs-app-router-personal-website.sanity.build/)                                     | [Studio](https://template-nextjs-app-router-personal-website.sanity.build/studio)                                      |
-| ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| ![Personal Website](https://user-images.githubusercontent.com/6951139/206395107-e58a796d-13a9-400a-94b6-31cb5df054ab.png) | ![Sanity Studio](https://user-images.githubusercontent.com/6951139/206395521-8a5f103d-4a0c-4da8-aff5-d2a1961fb2c0.png) |
+## 🖥️ Local development
 
-### Important files and folders
+To install the application:
 
-| File(s)                                     | Description                                             |
-| ------------------------------------------- | ------------------------------------------------------- |
-| `sanity.config.ts`                          | Config file for Sanity Studio                           |
-| `sanity.cli.ts`                             | Config file for Sanity CLI                              |
-| `/app/studio/[[...index]]/page.tsx`         | Where Sanity Studio is mounted                          |
-| `/app/api/revalidate/route.ts`              |  Serverless route for triggering ISR                    |
-| `/app/api/draft/route.ts`                   | Serverless route for triggering Draft mode              |
-| `/schemas`                                  | Where Sanity Studio gets its content types from         |
-| `/plugins`                                  | Where the advanced Sanity Studio customization is setup |
-| `/lib/sanity.api.ts`,`/lib/sanity.image.ts` | Configuration for the Sanity Content Lake client        |
-
-## Configuration
-
-### Step 1. Set up the environment
-
-Use the Deploy Button below. It will let you deploy the starter using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-sanity-example) as well as connect it to your Sanity Content Lake using [the Sanity Vercel Integration][integration].
-
-[![Deploy with Vercel](https://vercel.com/button)][vercel-deploy]
-
-### Step 2. Set up the project locally
-
-[Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) that was created for you on your GitHub account. Once cloned, run the following command from the project's root directory:
-
-```bash
-npx vercel link
+```shell
+npm ci
 ```
 
-Download the environment variables needed to connect Next.js and the Studio to your Sanity project:
+To start a local copy of the app on port `3000`:
 
-```bash
-npx vercel env pull
+```shell
+npm run dev
 ```
 
-### Step 3. Run Next.js locally in development mode
+### 📦 Docker builds
 
-```bash
-npm install && npm run dev
+A development preview can also be run from docker:
+
+```shell
+docker build -t next.tmcb.space .
+docker run -p 8080:80 next.tmcb.space
 ```
 
-When you run this development server, the changes you make in your frontend and studio configuration will be applied live using hot reloading.
+Alternatively you can pull the production container and skip all builds:
 
-Your personal website should be up and running on [http://localhost:3000][localhost-3000]! You can create and edit content on [http://localhost:3000/studio][localhost-3000-studio].
-
-### Step 4. Deploy to production
-
-To deploy your changes to production you use `git`:
-
-```bash
-git add .
-git commit
-git push
+```shell
+docker run -dit -p 8080:80 ghcr.io/tmcb-space/next.tmcb.space:latest
 ```
 
-Alternatively, you can deploy without a `git` hosting provider using the Vercel CLI:
+### 🎨 Code linting
 
-```bash
-npx vercel --prod
+To check the code and styles quality, use the following command:
+
+```shell
+npm run lint
 ```
 
-## Questions and Answers
+This will also display during development, but not break on errors.
 
-### It doesn't work! Where can I get help?
+To fix the linting errors, use the following command:
 
-In case of any issues or questions, you can post:
+```shell
+npm run format
+```
 
-- [GitHub Discussions for Next.js][vercel-github]
-- [Sanity's GitHub Discussions][sanity-github]
-- [Sanity's Community Slack][sanity-community]
+It is advised to run this command before committing or opening a pull request.
 
-### How can I remove the "Next steps" block from my personal website?
+### 📕 Types
 
-You can remove it by deleting the `IntroTemplate` component in `/app/(personal)/layout.tsx`.
+We have a couple of scripts to check and adjust missing types.
 
-## Next steps
+In order to dry run what types would be added to `package.json`:
 
-- [Join our Slack community to ask questions and get help][sanity-community]
-- [How to edit my content structure?][sanity-schema-types]
-- [How to query content?][sanity-groq]
-- [What is content modelling?][sanity-content-modelling]
+```shell
+npm run types:auto-check
+```
 
-[vercel-deploy]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTMCB-SPACE%2Ftmcb.space&project-name=nextjs-sanity-website&repository-name=tmcb.space&demo-title=Company+Website+with+Built-in+Content+Editing&demo-description=A+Sanity-powered+company+website+with+built-in+content+editing+and+instant+previews.+Uses+App+Router.&demo-url=https%3A%2F%2Ftmcb.space%2F&demo-image=https%3A%2F%2Fuser-images.githubusercontent.com%2F6951139%2F206395107-e58a796d-13a9-400a-94b6-31cb5df054ab.png&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx&external-id=nextjs%3Btemplate%3Dtmcb.space
-[integration]: https://www.sanity.io/docs/vercel-integration?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[`.env.local.example`]: .env.local.example
-[nextjs]: https://github.com/vercel/next.js
-[sanity-create]: https://www.sanity.io/get-started/create-project?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-deployment]: https://www.sanity.io/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-homepage]: https://www.sanity.io?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-community]: https://slack.sanity.io/
-[sanity-schema-types]: https://www.sanity.io/docs/schema-types?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-github]: https://github.com/sanity-io/sanity/discussions
-[sanity-groq]: https://www.sanity.io/docs/groq?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-content-modelling]: https://www.sanity.io/docs/content-modelling?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[sanity-webhooks]: https://www.sanity.io/docs/webhooks?utm_source=github.com&utm_medium=referral&utm_campaign=nextjs-v3vercelstarter
-[localhost-3000]: http://localhost:3000
-[localhost-3000-studio]: http://localhost:3000/studio
-[vercel]: https://vercel.com
-[vercel-github]: https://github.com/vercel/next.js/discussions
-[personal-website-pages]: https://github.com/sanity-io/template-nextjs-personal-website
-[app-dir]: https://beta.nextjs.org/docs/routing/fundamentals#the-app-directory
+In order to add any missing types to `package.json`:
+
+```shell
+npm run types:auto-add
+```
+
+### 🚀 Production deployment
+
+A production deployment is a complete build of the project, including the build of the static assets.
+
+```shell
+npm run build
+```
+
+## 🤝 Contributing
+
+We have a commit utility called [@tmcb/conventional-commit](https://github.com/tmcb-space/conventional-commit) that helps you write your commits in a way that is easy to understand and process by others.
+
+It is generally integrated as an `npm` script but you can run it with `npx` as well:
+
+```shell
+npm run push
+```
+
+For any other npm based project or dotnpmrc defaulting to `--yes`:
+
+```shell
+npx -y @tmcb/conventional-commit
+```
+
+## ⚖️ LICENSE
+
+MIT © [TED (Teodor-Eugen Dutulescu) Vortex](./LICENSE)

@@ -1,18 +1,25 @@
 'use client'
 
-import dynamic from 'next/dynamic'
+import { EncodeDataAttributeCallback, type QueryResponseInitial } from '@sanity/react-loader'
 
-import type { HomePageProps } from './HomePage'
+import { homePageQuery } from '@/sanity/lib/queries'
+import { useQuery } from '@/sanity/loader/useQuery'
+import { HomePagePayload } from '@/types'
 
-// Re-exported components using next/dynamic ensures they're not bundled
-// and sent to the browser unless actually used, with draftMode().enabled.
+import HomePage from './HomePage'
 
-const HomePage = dynamic(() => import('./HomePage'))
+type Props = {
+  initial: QueryResponseInitial<HomePagePayload | null>
+  encodeDataAttribute?: EncodeDataAttributeCallback
+}
 
-export default function HomePagePreview({ data }: HomePageProps) {
+export default function HomePagePreview(props: Props) {
+  const { initial } = props
+  const { data, encodeDataAttribute } = useQuery<HomePagePayload | null>(homePageQuery, {}, { initial })
+
   if (!data) {
     return <div className="text-center">Please start editing your Home document to see the preview!</div>
   }
 
-  return <HomePage data={data} />
+  return <HomePage data={data} encodeDataAttribute={encodeDataAttribute} />
 }

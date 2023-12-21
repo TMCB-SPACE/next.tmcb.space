@@ -5,6 +5,174 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.2.0-beta.14](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.13...v1.2.0-beta.14) (2023-12-21)
+
+
+### 🍕 Features
+
+* add estimated reading time indicator ([8e3e27f](https://github.com/TMCB-SPACE/next.tmcb.space/commit/8e3e27fe569611a8ce7cb81c73c5c72e27078c20))
+* add minimal post author display and links ([3ab7280](https://github.com/TMCB-SPACE/next.tmcb.space/commit/3ab72804a9e0cdd916ab0ba1b85b2b394400625f)), closes [#7](https://github.com/TMCB-SPACE/next.tmcb.space/issues/7)
+
+## [1.2.0-beta.13](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.12...v1.2.0-beta.13) (2023-12-20)
+
+
+### 📝 Documentation
+
+* remove missing section ([bb3c937](https://github.com/TMCB-SPACE/next.tmcb.space/commit/bb3c9370738d12c67b12c43b023c1e2486090d7c))
+
+## [1.2.0-beta.12](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.11...v1.2.0-beta.12) (2023-12-20)
+
+
+### 🍕 Features
+
+* add minimal team member display ([9383eeb](https://github.com/TMCB-SPACE/next.tmcb.space/commit/9383eeb170645fd000932ecdcb4740d67b7ae1c7))
+
+
+### 🐛 Bug Fixes
+
+* correct project description page ([b189eec](https://github.com/TMCB-SPACE/next.tmcb.space/commit/b189eec68de9795e8dae3817fddd52103fb49c12))
+* correct project listing hover ([db3416f](https://github.com/TMCB-SPACE/next.tmcb.space/commit/db3416f865ee2cfcaac8beb46c9fe0c7df7aa30f))
+
+
+### 🎨 Styles
+
+* use latest prettier lint ([8395c79](https://github.com/TMCB-SPACE/next.tmcb.space/commit/8395c7999ad7d0f7075166220b1bdf322327a53a))
+
+## [1.2.0-beta.11](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.10...v1.2.0-beta.11) (2023-12-19)
+
+
+### 🔁 Continuous Integration
+
+* add deploy domain target url ([c8cb3a8](https://github.com/TMCB-SPACE/next.tmcb.space/commit/c8cb3a8855f579a93c2ada2f6e2d3991ddd6c8e8)), closes [#3](https://github.com/TMCB-SPACE/next.tmcb.space/issues/3)
+
+## [1.2.0-beta.10](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2023-12-19)
+
+
+### 🍕 Features
+
+* add missing license file ([009a902](https://github.com/TMCB-SPACE/next.tmcb.space/commit/009a90285668effe7a27b2f0d94008753c4c3410))
+
+
+### 🐛 Bug Fixes
+
+* add proper documentation and template link ([326d514](https://github.com/TMCB-SPACE/next.tmcb.space/commit/326d514135cdb4a56cb8ad2a9990faaf6aefd124)), closes [#4](https://github.com/TMCB-SPACE/next.tmcb.space/issues/4)
+
+
+### ✅ Tests
+
+* make docker build optional for now ([2d8ab25](https://github.com/TMCB-SPACE/next.tmcb.space/commit/2d8ab2560a79c451d99b6e9325f9e3ac2bf371b7))
+
+
+### 🤖 Build System
+
+* add docker build ([5a33b51](https://github.com/TMCB-SPACE/next.tmcb.space/commit/5a33b51611fc600d4ba76cbb462056763338ebf0))
+
+## [1.2.0-beta.10](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2023-12-19)
+
+
+### 🍕 Features
+
+* add missing license file ([009a902](https://github.com/TMCB-SPACE/next.tmcb.space/commit/009a90285668effe7a27b2f0d94008753c4c3410))
+
+
+### 🐛 Bug Fixes
+
+* add proper documentation and template link ([326d514](https://github.com/TMCB-SPACE/next.tmcb.space/commit/326d514135cdb4a56cb8ad2a9990faaf6aefd124)), closes [#4](https://github.com/TMCB-SPACE/next.tmcb.space/issues/4)
+
+
+### 🤖 Build System
+
+* add docker build ([5a33b51](https://github.com/TMCB-SPACE/next.tmcb.space/commit/5a33b51611fc600d4ba76cbb462056763338ebf0))
+
+## [1.2.0-beta.9](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2023-12-19)
+
+
+### 🍕 Features
+
+* upgrade nextjs to 14 and sanity components ([3d54673](https://github.com/TMCB-SPACE/next.tmcb.space/commit/3d54673989ea3365887054f7e47d7bc0146c11e8)), closes [#1](https://github.com/TMCB-SPACE/next.tmcb.space/issues/1)
+
+
+### 🐛 Bug Fixes
+
+* correct min-height on page slugs ([f0eba9e](https://github.com/TMCB-SPACE/next.tmcb.space/commit/f0eba9e0731bb9dd73d9cf36c6a08098e71e47dd))
+
+## [1.2.0-beta.8](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2023-12-01)
+
+
+### 🔁 Continuous Integration
+
+* test new vercel ignore build step ([e074e2c](https://github.com/TMCB-SPACE/next.tmcb.space/commit/e074e2c1bd9adb499b791e3a5353cd248bad99ca))
+
+## [1.2.0-beta.7](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2023-11-30)
+
+
+### 🐛 Bug Fixes
+
+* correct multiple theme providers ([3fd3104](https://github.com/TMCB-SPACE/next.tmcb.space/commit/3fd310461bd8e954914fc10651cbddda38e04ff8))
+* correct syntax highlighter hydration and types ([249a988](https://github.com/TMCB-SPACE/next.tmcb.space/commit/249a988220893b366e540027eccd21e7ddfac899))
+
+## [1.2.0-beta.6](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2023-11-30)
+
+
+### 🍕 Features
+
+* add blog post simple display ([641d6cb](https://github.com/TMCB-SPACE/next.tmcb.space/commit/641d6cbdfe0c77928135406b234f2b669279c3f2))
+* add portable text highlight and client code ([fcd9cf1](https://github.com/TMCB-SPACE/next.tmcb.space/commit/fcd9cf11073252d28bdbb146b0e2b011f7fea94f))
+
+
+### 🤖 Build System
+
+* update dependencies ([c068dfb](https://github.com/TMCB-SPACE/next.tmcb.space/commit/c068dfb7ab47171e8c172f2178a7687e7cf32cb4))
+
+## [1.2.0-beta.5](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2023-11-28)
+
+
+### 🍕 Features
+
+* break all spacings and change posts to grid ([f058b47](https://github.com/TMCB-SPACE/next.tmcb.space/commit/f058b47526764a28dc25833c769945a1eef73033))
+
+
+### 🧑‍💻 Code Refactoring
+
+* correct lint errors ([b1982d5](https://github.com/TMCB-SPACE/next.tmcb.space/commit/b1982d54162d21fed7d775aa55495004c014c4ec))
+
+## [1.2.0-beta.4](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2023-11-28)
+
+
+### 🐛 Bug Fixes
+
+* correct home page layout ([9b32f53](https://github.com/TMCB-SPACE/next.tmcb.space/commit/9b32f53ed8057e9c85a21aad57139a6abe3d2389))
+
+## [1.2.0-beta.3](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2023-11-28)
+
+
+### 🍕 Features
+
+* add basic post structures and homepage showcase ([ef81bc9](https://github.com/TMCB-SPACE/next.tmcb.space/commit/ef81bc9cfd1e9d9f9772005df1831d00ed9f0d8e))
+* add team members functionality schemas ([9aa7fbd](https://github.com/TMCB-SPACE/next.tmcb.space/commit/9aa7fbd165d37a370699280278ab0e3caaccb126))
+* change responsive screen sizes and add member display ([fdcd418](https://github.com/TMCB-SPACE/next.tmcb.space/commit/fdcd41846f42b4e8466e70c2bc5c84651124dcde))
+* normalize basic page display ([97192d1](https://github.com/TMCB-SPACE/next.tmcb.space/commit/97192d12ee9dce963ee8e2cc0ee37da38c3e6a23))
+
+
+### 🐛 Bug Fixes
+
+* correct hydration errors ([560b0d3](https://github.com/TMCB-SPACE/next.tmcb.space/commit/560b0d3394cc3d283122f88fdac5e305549be70b))
+* correct overall responsive layout spacing ([0b6c2b3](https://github.com/TMCB-SPACE/next.tmcb.space/commit/0b6c2b305e41485198b318489c96455b04f0bcf5))
+
+## [1.2.0-beta.2](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2023-11-23)
+
+
+### 🐛 Bug Fixes
+
+* correct lint and color errors ([a691bab](https://github.com/TMCB-SPACE/next.tmcb.space/commit/a691bab1f15dcda5edee566da5155c555a923212))
+
+## [1.2.0-beta.1](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.1.3...v1.2.0-beta.1) (2023-11-22)
+
+
+### 🍕 Features
+
+* modernize next and sanity ([faab0da](https://github.com/TMCB-SPACE/next.tmcb.space/commit/faab0da4525138b763d3cde42c9fc746ed0b40cc))
+
 ## [1.1.3](https://github.com/TMCB-SPACE/next.tmcb.space/compare/v1.1.2...v1.1.3) (2023-11-22)
 
 

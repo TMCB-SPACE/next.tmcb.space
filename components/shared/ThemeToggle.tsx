@@ -1,8 +1,8 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { useEffect,useState } from 'react'
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useEffect, useState } from 'react'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
